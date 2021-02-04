@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Global */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #1B1C20;
+}
+
+body, .container, h1, h2, h3, h4, h5, h6, p, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+button, input {
+    border: none;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    background: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 calc((100vw - 1400px) / 2) 80px;
+}
+
+/* Site header */
+
+.siteHeader {
+    width: 100%;
+}
+
+.siteHeaderTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+.siteHeaderTopClass {
+    width: 244px;
+    height: 44px;
+}
+
+.siteHeaderTopKalchem {
+    width: 249px;
+    height: 106px;
+}
+
+.siteHeaderSearchInput {
+    width: 260px;
+    height: 30px;
+    border: 1px solid #AEAEAE;
+    padding: 5px;
+}
+
+.siteHeaderMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #B4C618;
+    height: 40px;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.siteHeaderMenuList {
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+}
+
+.siteHeaderMenuHome {
+    padding-right: 10px;
+}
+
+.menuItem {
+    padding: 0 22px;
+    border-right: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menuItem:last-child {
+    border-right: none;
+}
+
+/* Landing page */
+
+.landingPage {
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    position: relative;
+}
+
+.landingPageImage {
+    width: 100%;
+    height: auto;
+}
+
+.slideHeaderPrimary, .slideHeaderSecondary {
+    position: absolute;
+    left: 50px;
+    background: #1B1C20;
+    color: #fff;
+    padding: 18px;
+    height: 54px;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.slideHeaderPrimary1 {
+    top: 50px;
+}
+
+.slideHeaderPrimary2 {
+    top: 115px;
+}
+
+.slideHeaderSecondary {
+    height: 36px;
+    font-weight: 400;
+    top: 190px;
+    font-size: 20px;
+}
+
+.slideHeaderButton {
+    background: #B4C618;
+    color: #fff;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonRight {
+    padding-left: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    height: 20px;
+}
+
+.dot {
+    background: #F3F3F3;
+    width: 120px;
+    border-right: 1px solid #1B1C20;
+}
+
+.dotActive {
+    background: #B4C618;
+}
+
+.progressBar {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 150px;
+    height: 10px;
+    background: #1B1C20;
+}
+
+.progressBarProgress {
+    display: block;
+    width: 30%;
+    height: 100%;
+    background: #B4C618;
+}
+
+section {
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* Aktualnosci */
+
+.sectionHeader {
+    color: #1B1C20;
+    font-size: 26px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1B1C20;
+    padding-bottom: 5px;
+}
+
+.aktualnosciInner {
+    display: flex;
+}
+
+.aktualnosciLeft {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.aktualnosciLeft::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 40px;
+    height: calc(100% - 80px);
+    width: 1px;
+    background: #B2B2B2;
+}
+
+.aktualnosciItem {
+    width: 45%;
+    margin-bottom: 80px;
+}
+
+.aktualnosciItem:nth-child(odd) {
+    margin-right: 5%;
+}
+
+.aktualnosciItemHeader {
+    font-size: 17px;
+    color: #B4C618;
+    margin-bottom: 10px;
+}
+
+.aktualnosciItemDate {
+    font-size: 12px;
+    color: #AEAEAE;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.aktualnosciItemExcerpt {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.aktualnosciItemButton {
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.aktualnosciItemButtonImg {
+    transition: .2s ease-in-out;
+    padding-left: 5px;
+}
+
+.aktualnosciItemButton:hover .aktualnosciItemButtonImg {
+    transform: translateX(10px);
+}
+
+.aktualnosciRight {
+    width: 40%;
+}
+
+.aktualnosciRightTop {
+    display: flex;
+    padding: 40px 0 40px 20px;
+    width: 100%;
+    position: relative;
+}
+
+.aktualnosciRightTop::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: #AEAEAE;
+}
+
+.aktualnosciRightTop > * {
+    width: 50%;
+}
+
+.aktualnosciRightTop h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.aktualnosciRightTop h3 {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.contact {
+    margin: 12px 0;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.contactFirst {
+    margin-top: 30px;
+}
+
+.contactIcon {
+    padding-right: 15px;
+}
+
+.contact a {
+    display: block;
+    transition: .2s ease-in-out;
+}
+
+.contact:hover a {
+    transform: translateX(10px);
+    color: #B4C618;
+}
+
+.aktualnosciRightTopRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.kalchemLogoSmall {
+    width: 93px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.aktualnosciRightTopHint {
+    font-size: 16px;
+    text-align: right;
+    font-weight: 700 !important;
+    margin-bottom: 25px;
+}
+
+.aktualnosciRightTopRightButton {
+    background: #B4C618;
+    color: #ffffff;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Marki */
+
+.markiInner {
+    width: 100%;
+    height: 180px;
+    margin-top: 25px;
+    background: url("./img/marki-tlo.png");
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.markiInnerItemImg {
+    padding: 0 30px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 48px;
+}
+
+.arrowLeft {
+    left: 50px;
+}
+
+.arrowRight {
+    right: 50px;
+}
+
+/* Maszyny */
+
+.maszyny .siteHeaderTopClass {
+    margin: 35px auto;
+    display: block;
+}
+
+.classHint {
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.maszynyInner {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 350px);
+    grid-row-gap: 60px;
+    grid-column-gap: 5%;
+    margin-top: 70px;
+}
+
+.maszynyInnerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maszynyInnerItemImg {
+    width: 100%;
+}
+
+.maszynyInnerItemHeader {
+    background: #B4C618;
+    width: fit-content;
+    width: -moz-max-content;
+    padding: 8px 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Uslugi */
+
+.uslugiInner {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(3, 140px);
+    grid-row-gap: 40px;
+    grid-column-gap: 7%;
+    margin-top: 40px;
+}
+
+.uslugiItem {
+    display: flex;
+    align-items: center;
+}
+
+.uslugiItemImgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    padding-right: 45px;
+}
+
+.uslugiItemHeader {
+    font-size: 17px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.uslugiItemDescription {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    background: #C5C5C5;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    transition: .2s ease-in-out;
+}
+
+.footer a:hover {
+    color: #efefef;
+}
+
+.footerFirst {
+    list-style-type: none;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.footerSecond {
+    margin: 5px 0 40px;
+    display: flex;
+    align-items: center;
+}
+
+.footerSecond h3 {
+    font-size: 15px;
+}
+
+.facebook {
+    padding-left: 15px;
+}
+
+.footerThird, .footerFourth {
+    font-size: 15px;
+    margin: 5px 0;
+}
