@@ -20,28 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b42081b-98a5-4a67-9163-3007436ddb2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/akpil-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/buhler-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/chevron_duo_left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/chevron_duo_right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/claas-czlowiek.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/claas-logo-szare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/claas-zdjecie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/finansowanie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/fortis---logo---podstawowe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/hardi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/horsch-logo-szare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/kongskilde-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/maschio-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/pichon-logo-szare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/riela-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tornum-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/umega.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maszyny-nowe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maszyny-nowe.html" beforeDir="false" afterPath="$PROJECT_DIR$/maszyny-nowe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612395002532</updated>
       <workItem from="1612395003718" duration="9187000" />
-      <workItem from="1612632606324" duration="12009000" />
+      <workItem from="1612632606324" duration="18833000" />
     </task>
     <servers />
   </component>

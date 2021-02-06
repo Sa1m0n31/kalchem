@@ -36,6 +36,7 @@ a {
 
 .siteHeader {
     width: 100%;
+    position: relative;
 }
 
 .siteHeaderTop {
@@ -67,9 +68,50 @@ a {
     justify-content: space-between;
     align-items: center;
     background: #B4C618;
-    min-height: 40px;
-    width: 100%;
+    height: 40px;
     padding: 5px 20px;
+    z-index: 100;
+    transition: .5s width;
+    transform-origin: 50% 50%;
+    top: 0;
+    left: 0;
+    width: 1400px;
+    position: relative;
+}
+
+.siteHeaderMenu * {
+    z-index: 100;
+}
+
+.siteMenuLeft, .siteMenuRight {
+    height: 40px;
+    position: absolute;
+    top: 0;
+    z-index: 10 !important;
+    width: calc((100vw - 1400px) / 2);
+    background: #B4C618;
+    transform: scaleX(0);
+}
+
+.siteMenuLeft {
+    left: 0;
+    transform: translateX(-100%) scaleX(0);
+    transform-origin: 100%;
+}
+
+.siteMenuRight {
+    right: 0;
+    transform: translateX(100%) scaleX(0);
+    transform-origin: 0;
+}
+
+.stickyMenu {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    width: 100vw;
 }
 
 .siteHeaderMenuList {
@@ -569,7 +611,7 @@ section {
 }
 
 .footerSecond {
-    margin: 5px 0 40px;
+    margin: 25px 0 40px;
     display: flex;
     align-items: center;
 }
