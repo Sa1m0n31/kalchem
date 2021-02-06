@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b42081b-98a5-4a67-9163-3007436ddb2f" name="Default Changelist" comment="" />
+    <list default="true" id="1b42081b-98a5-4a67-9163-3007436ddb2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/akpil-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/buhler-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/chevron_duo_left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/chevron_duo_right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/claas-czlowiek.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/claas-logo-szare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/claas-zdjecie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/finansowanie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/fortis---logo---podstawowe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/hardi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/horsch-logo-szare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/kongskilde-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/maschio-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/pichon-logo-szare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/riela-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tornum-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/umega.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maszyny-nowe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +52,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nzZheuTG5EtRuvCXM3dcuCzPpl" />
   <component name="ProjectViewState">
@@ -42,14 +87,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612395002532</updated>
-      <workItem from="1612395003718" duration="8367000" />
+      <workItem from="1612395003718" duration="9187000" />
+      <workItem from="1612632606324" duration="12009000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1612635658573">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612635658573" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1612634170064">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612634170064" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612400640341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
