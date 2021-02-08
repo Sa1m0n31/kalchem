@@ -29,7 +29,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 calc((100vw - 1400px) / 2) 80px;
+    padding: 0 calc((100% - 1400px) / 2) 80px;
 }
 
 /* Site header */
@@ -427,7 +427,6 @@ section {
 }
 
 .markiTrack {
-    width: 1183px;
     display: flex;
     flex-basis: 100%;
     overflow: hidden !important;
@@ -534,6 +533,7 @@ section {
 
 .maszynyInnerItemImg {
     width: 100%;
+    height: 100%;
 }
 
 .maszynyInnerItemHeader {
@@ -598,7 +598,7 @@ section {
 }
 
 .footer a:hover {
-    color: #efefef;
+    color: #ededed;
 }
 
 .footerFirst {
@@ -648,14 +648,20 @@ section {
 
 .maszynyNoweList {
     margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+}
+
+@media(min-width: 900px) {
+    .maszynyNoweList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
 
 .maszynyNoweList img {
-    margin-bottom: 30px;
+    display: block;
+    margin: 0 auto 30px auto;
 }
 
 .greenHeader {

@@ -15,8 +15,9 @@ const slides = [slide1, slide2, slide3, slide4];
 const dots = [dot1, dot2, dot3, dot4];
 
 let breakFlag = false;
+let actualSlide, nextSlide, actualSlideNumber = 0, previousSlideNumber = 0;
 
-const nextSlide = (n) => {
+const nextSlider = (n) => {
     /* Turn off all dots */
     dots.forEach((item) => {
         item.style.background = "#F3F3F3";
@@ -24,20 +25,37 @@ const nextSlide = (n) => {
     /* Turn on current dot */
     dots[n].style.background = "#B4C618";
 
-    breakFlag = true;
+    previousSlideNumber = actualSlideNumber;
+    actualSlideNumber = n;
+    if(previousSlideNumber !== actualSlideNumber) breakFlag = true;
 }
 
 const startSlider = (n = 0) => {
     /* Variables */
     let i = 0, j = 100;
-    let actualSlide, nextSlide;
 
     /* Set progressBar load */
     let progressLoad = setInterval(() => {
         progressBar.style.width = i + "%";
         i++;
         if((i === 101)||(breakFlag)) {
-            if(breakFlag) breakFlag = false;
+            if(breakFlag) {
+                /* User click slide dot */
+                breakFlag = false;
+            }
+            else {
+                /* Next slide */
+                previousSlideNumber = actualSlideNumber;
+                if(actualSlideNumber < 3) actualSlideNumber++;
+                else actualSlideNumber = 0;
+
+                /* Turn off all dots */
+                dots.forEach((item) => {
+                    item.style.background = "#F3F3F3";
+                });
+                /* Turn on current dot */
+                dots[actualSlideNumber].style.background = "#B4C618";
+            }
             clearInterval(progressLoad);
             /* Gentle back */
             let gentleBack = setInterval(() => {
@@ -49,28 +67,23 @@ const startSlider = (n = 0) => {
             }, 2);
 
             setTimeout(() => {
+                /* Change slide */
+                actualSlide = slides[previousSlideNumber];
+                if(actualSlideNumber > 3) nextSlide = slides[0];
+                else nextSlide = slides[actualSlideNumber];
+
+                gsap.fromTo(actualSlide, { opacity: 1}, { opacity: 0, duration: 1 })
+                gsap.fromTo(nextSlide, { opacity: 0 }, { opacity: 1, duration: 1 });
+
                 /* Invoke function again - next slide */
-                if(n === 3) startSlider(0);
-                else startSlider(n+1);
+                if(actualSlideNumber >= 3) startSlider(0);
+                else startSlider(actualSlideNumber+1);
             }, 200);
         }
     }, 50);
-
-
-    /* Change slide */
-    actualSlide = slides[n];
-    if(n === 3) nextSlide = slides[0];
-    else nextSlide = slides[n+1];
-
-    gsap.fromTo(actualSlide, {opacity: 1}, { opacity: 0, duration: 1 })
-    gsap.fromTo(nextSlide, { opacity: 0 }, { opacity: 1, duration: 1 });
 }
 
-startSlider(0); // Start slider when page load
-
-const resetSlider = () => {
-
-}
+if(progressBar !== null) startSlider(0); // Start slider when page load
 
 /* Marki w naszej ofercie */
 const markiLeft = document.querySelector(".markiLeft");
@@ -78,7 +91,10 @@ const markiRight = document.querySelector(".markiRight");
 const markiTrack = document.querySelector(".markiTrack");
 
 const moveMarkiLeft = () => {
-    const sliderWidth = Math.round(markiTrack.clientWidth / 3);
+    let sliderWidth;
+    if(window.innerWidth > 1400) sliderWidth = Math.round(markiTrack.clientWidth / 3);
+    else if(window.innerWidth > 1000) sliderWidth = Math.round(markiTrack.clientWidth / 2);
+    else sliderWidth = Math.round(markiTrack.clientWidth);
     markiTrack.scrollBy({
        left: -sliderWidth,
        behavior: "smooth"
@@ -86,7 +102,10 @@ const moveMarkiLeft = () => {
 }
 
 const moveMarkiRight = () => {
-    const sliderWidth = Math.round(markiTrack.clientWidth / 3);
+    let sliderWidth;
+    if(window.innerWidth > 1400) sliderWidth = Math.round(markiTrack.clientWidth / 3);
+    else if(window.innerWidth > 1000) sliderWidth = Math.round(markiTrack.clientWidth / 2);
+    else sliderWidth = Math.round(markiTrack.clientWidth);
     markiTrack.scrollBy({
         left: sliderWidth,
         behavior: "smooth"
@@ -158,3 +177,74 @@ window.addEventListener("scroll", () => {
 
 
 });
+
+/* RWD adjustments with JS */
+const landingSlide = document.querySelector(".slide");
+const dotsContainer = document.querySelector(".dots");
+const frontPageMain = document.querySelector(".landingPage");
+
+if((window.innerWidth <= 1500)&&(progressBar !== null)) {
+    dotsContainer.style.top = (landingSlide.clientHeight - 80) + "px";
+    frontPageMain.style.height = landingSlide.clientHeight + "px";
+}
+
+if(progressBar !== null) {
+    window.addEventListener("resize", () => {
+        if(window.innerWidth <= 1500) {
+            dotsContainer.style.top = (landingSlide.clientHeight - 80) + "px";
+            frontPageMain.style.height = landingSlide.clientHeight + "px";
+        }
+    });
+}
+
+/* Siema carousel for Marki on the top of Maszyny Nowe page */
+let topCarousel;
+const checkCarousel = () => {
+    if(window.innerWidth < 500) {
+        topCarousel = new Siema({
+            selector: ".maszynyNoweList",
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 2,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: true,
+            rtl: false,
+            onInit: () => {},
+            onChange: () => {},
+        });
+
+        setInterval(() => {
+            topCarousel.next();
+        }, 2000);
+    }
+    else if(window.innerWidth < 900) {
+        topCarousel = new Siema({
+            selector: ".maszynyNoweList",
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 3,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: true,
+            rtl: false,
+            onInit: () => {},
+            onChange: () => {},
+        });
+
+        setInterval(() => {
+            topCarousel.next();
+        }, 2000);
+    }
+};
+
+checkCarousel();
+if(document.querySelector(".maszynyNoweList") !== null) {
+    window.addEventListener("resize", () => {
+        checkCarousel();
+    });
+}
