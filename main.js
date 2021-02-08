@@ -14,24 +14,30 @@ const slide4 = document.querySelector("#slide4");
 const slides = [slide1, slide2, slide3, slide4];
 const dots = [dot1, dot2, dot3, dot4];
 
+let breakFlag = false;
+
+const nextSlide = (n) => {
+    /* Turn off all dots */
+    dots.forEach((item) => {
+        item.style.background = "#F3F3F3";
+    });
+    /* Turn on current dot */
+    dots[n].style.background = "#B4C618";
+
+    breakFlag = true;
+}
 
 const startSlider = (n = 0) => {
     /* Variables */
     let i = 0, j = 100;
     let actualSlide, nextSlide;
 
-    /* Turn off all dots */
-    dots.forEach((item) => {
-       item.style.background = "#F3F3F3";
-    });
-    /* Turn on current dot */
-    dots[n].style.background = "#B4C618";
-
     /* Set progressBar load */
     let progressLoad = setInterval(() => {
         progressBar.style.width = i + "%";
         i++;
-        if(i === 101) {
+        if((i === 101)||(breakFlag)) {
+            if(breakFlag) breakFlag = false;
             clearInterval(progressLoad);
             /* Gentle back */
             let gentleBack = setInterval(() => {
@@ -50,6 +56,7 @@ const startSlider = (n = 0) => {
         }
     }, 50);
 
+
     /* Change slide */
     actualSlide = slides[n];
     if(n === 3) nextSlide = slides[0];
@@ -58,6 +65,8 @@ const startSlider = (n = 0) => {
     gsap.fromTo(actualSlide, {opacity: 1}, { opacity: 0, duration: 1 })
     gsap.fromTo(nextSlide, { opacity: 0 }, { opacity: 1, duration: 1 });
 }
+
+startSlider(0); // Start slider when page load
 
 const resetSlider = () => {
 
@@ -85,19 +94,6 @@ const moveMarkiRight = () => {
 }
 
 /* Maszyny nowe - set progress bars on scroll */
-
-function getOffsetLeft( elem )
-{
-    var offsetLeft = 0;
-    do {
-        if ( !isNaN( elem.offsetLeft ) )
-        {
-            offsetLeft += elem.offsetLeft;
-        }
-    } while( elem = elem.offsetParent );
-    return offsetLeft;
-}
-
 if(document.querySelector(".maszynyNoweContainer") !== null) {
     const progressBar1 = document.querySelector("#maszynyNoweProgressBar1");
     const progressBar2 = document.querySelector("#maszynyNoweProgressBar2");
