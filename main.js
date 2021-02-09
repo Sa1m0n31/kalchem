@@ -242,9 +242,66 @@ const checkCarousel = () => {
     }
 };
 
-checkCarousel();
 if(document.querySelector(".maszynyNoweList") !== null) {
+    checkCarousel();
     window.addEventListener("resize", () => {
         checkCarousel();
     });
 }
+
+/* Uslugi buttons */
+const ubezpieczenieBtn = document.querySelector("#ubezpieczenieBtn");
+const finansowanieBtn = document.querySelector("#finansowanieBtn");
+
+const ubezpieczenieInfo = document.querySelector("#ubezpieczenieInfo");
+const finansowanieInfo = document.querySelector("#finansowanieInfo");
+
+const ubezpieczenieWrapper = document.querySelector(".uslugiInfoWrapper1");
+const finansowanieWrapper = document.querySelector(".uslugiInfoWrapper2");
+
+const ubezpieczenieArrow = document.querySelector("#ubezpieczenieArrow");
+const finansowanieArrow = document.querySelector("#finansowanieArrow");
+
+let ubezpieczenie = false, finansowanie = false;
+
+const ubezpieczenieClick = () => {
+    if(!ubezpieczenie) {
+        /* Open */
+        ubezpieczenie = true;
+        gsap.set(ubezpieczenieArrow, { transform: 'rotate(0)' });
+        gsap.to(ubezpieczenieWrapper, { height: 200, duration: .4 })
+            .then(() => {
+                gsap.to(ubezpieczenieInfo, { opacity: 1, duration: .2 });
+            });
+    }
+    else {
+        /* Close */
+        ubezpieczenie = false;
+        gsap.set(ubezpieczenieArrow, { transform: 'rotate(180deg)' });
+        gsap.to(ubezpieczenieInfo, { opacity: 0, duration: .2 })
+            .then(() => {
+                gsap.to(ubezpieczenieWrapper, { height: 0, duration: .4 });
+            });
+    }
+}
+const finansowanieClick = () => {
+    if(!finansowanie) {
+        /* Open */
+        finansowanie = true;
+        gsap.set(finansowanieArrow, { transform: 'rotate(0)' });
+        gsap.to(finansowanieWrapper, { height: 200, duration: .4 })
+            .then(() => {
+                gsap.to(finansowanieInfo, { opacity: 1, duration: .2 });
+            });
+    }
+    else {
+        /* Close */
+        finansowanie = false;
+        gsap.set(finansowanieArrow, { transform: 'rotate(180deg)' });
+        gsap.to(finansowanieInfo, { opacity: 0, duration: .2 })
+            .then(() => {
+                gsap.to(finansowanieWrapper, { height: 0, duration: .4 });
+            });
+    }
+}
+

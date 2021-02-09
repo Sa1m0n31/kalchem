@@ -302,6 +302,23 @@
     section {
         margin-top: 80px;
     }
+
+    .uslugiIcon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .uslugiBtnText {
+        font-size: 16px;
+    }
+
+    .uslugiInfo {
+        font-size: 14px;
+    }
+
+    .uslugiInfoWrapper1, .uslugiInfoWrapper2 {
+        margin-top: 5px;
+    }
 }
 
 @media(max-width: 500px) {

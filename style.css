@@ -202,12 +202,36 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    transition: .4s ease-in-out all;
+    z-index: 5;
+}
+
+.slideHeaderButton::after {
+    content: url("./img/caret_right.svg");
+    position: absolute;
+    right: 18px;
+    transform: translateX(100%);
+    top: 0;
+    height: 100%;
+    background: #B4C618;
+    width: 30px;
+    transition: .4s ease-in-out all;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 18px;
+    align-items: center;
+}
+
+.slideHeaderButton:hover::after {
+    width: 40px;
+    padding-left: 28px;
 }
 
 .buttonRight {
     padding-left: 10px;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
 }
 
 .dots {
@@ -766,4 +790,69 @@ section {
     width: 100%;
     height: 7px;
     background: #B4C618;
+}
+
+/* Uslugi */
+
+.uslugiMain {
+    width: 100%;
+}
+
+.uslugiMainContentItem {
+    margin: 50px 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.uslugiMainContentItem:last-child {
+    margin-bottom: 0;
+}
+
+.uslugiIcon {
+    display: block;
+}
+
+.uslugiBtn {
+    background: #B4C618;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+}
+
+.uslugiBtnText {
+    color: #fff;
+    padding-right: 15px;
+}
+
+.arrowDown {
+    transform: rotate(180deg);
+}
+
+.uslugiInfoWrapper1, .uslugiInfoWrapper2 {
+    margin-top: 32px;
+    height: 0;
+    transition: .4s ease-in-out all;
+    display: flex;
+    align-items: flex-start;
+}
+
+.uslugiInfo {
+    text-align: center;
+    position: relative;
+    max-width: 820px;
+    padding: 30px;
+    box-shadow: 0 0 5px #00000040;
+    border-top: 5px solid #B4C618;
+    opacity: 0;
+    transition: 1s all;
 }
