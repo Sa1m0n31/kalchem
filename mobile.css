@@ -56,6 +56,10 @@
     .maszynyInnerItemHeader {
         font-size: 17px;
     }
+
+    .osobyKontaktoweInner {
+        width: 80%;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -75,6 +79,15 @@
     .dot {
         width: 80px;
     }
+
+    .firmaImg, .zespolImg, .zespolInner {
+        width: 80%;
+        height: auto;
+    }
+
+    .firmaDescription {
+        width: 80%;
+    }
 }
 
 @media(max-width: 1100px) {
@@ -91,6 +104,15 @@
     .menuItem {
         padding-left: 8px;
         padding-right: 8px;
+    }
+
+    .serwisInner {
+        width: 100%;
+    }
+
+    .serwisImg {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -129,6 +151,10 @@
 }
 
 @media(max-width: 900px) {
+    .container {
+        padding-bottom: 20px;
+    }
+
     .uslugiInner {
         display: flex;
         flex-direction: column;
@@ -150,6 +176,10 @@
 
     .maszynyOverlayText {
         display: none;
+    }
+
+    .osobyKontaktoweInner {
+        width: 100%;
     }
 }
 
@@ -270,6 +300,34 @@
     .markiInnerItemImg {
         padding: 0;
     }
+
+    .serwisInner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .serwis, .czesci {
+        width: 80%;
+    }
+
+    .czesci {
+        margin-top: 110px;
+    }
+}
+
+@media(max-width: 650px) {
+    .divider {
+        display: none;
+    }
+
+    .osobyKontaktoweInner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .osobyKontaktoweInner .pracownik:first-of-type {
+        margin-bottom: 40px;
+    }
 }
 
 @media(max-width: 600px) {
@@ -319,6 +377,15 @@
     .uslugiInfoWrapper1, .uslugiInfoWrapper2 {
         margin-top: 5px;
     }
+
+    .firmaImg, .zespolImg {
+        width: 100%;
+    }
+
+    .firmaDescription {
+        width: 100%;
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -341,5 +408,22 @@
 
     .arrowRight {
         right: 30px;
+    }
+}
+
+@media(max-width: 400px) {
+    .serwis, .czesci {
+        width: 100%;
+    }
+}
+
+@media(max-width: 350px) {
+    .zespolInner {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .zespolSection {
+        margin-right: 0;
     }
 }

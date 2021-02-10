@@ -305,3 +305,220 @@ const finansowanieClick = () => {
     }
 }
 
+/* Open and close serwis i czesci contents */
+let popupsSerwis = [false, false, false, false];
+let popupsCzesci = [false, false, false, false, false];
+
+const serwis1 = document.querySelector("#serwis1");
+const serwis2 = document.querySelector("#serwis2");
+const serwis3 = document.querySelector("#serwis3");
+const serwis4 = document.querySelector("#serwis4");
+const serwisH1 = document.querySelector("#serwisH1");
+const serwisH2 = document.querySelector("#serwisH2");
+const serwisH3 = document.querySelector("#serwisH3");
+const serwisH4 = document.querySelector("#serwisH4");
+
+const czesci1 = document.querySelector("#czesci1");
+const czesci2 = document.querySelector("#czesci2");
+const czesci3 = document.querySelector("#czesci3");
+const czesci4 = document.querySelector("#czesci4");
+const czesci5 = document.querySelector("#czesci5");
+const czesciH1 = document.querySelector("#czesciH1");
+const czesciH2 = document.querySelector("#czesciH2");
+const czesciH3 = document.querySelector("#czesciH3");
+const czesciH4 = document.querySelector("#czesciH4");
+const czesciH5 = document.querySelector("#czesciH5");
+
+const over1500Heights = ["30px", "80px", "80px", "80px", "90px", "90px", "90px", "140px", "140px"];
+const over1000Heights = ["40px", "90px", "110px", "80px", "130px", "90px", "140px", "190px", "140px"];
+const over700Heights = ["70px", "140px", "190px", "110px", "190px", "150px", "200px", "290px", "150px"];
+let heights;
+
+const serwis = (n, e) => {
+    if(window.innerWidth > 1500) {
+        heights = over1500Heights;
+    }
+    else if(window.innerWidth > 1000) {
+        heights = over1000Heights;
+    }
+    else {
+        heights = over700Heights;
+    }
+
+    if(n === 1) {
+        if(!popupsSerwis[0]) {
+            serwisH1.style.color = "#B4C618";
+            popupsSerwis[0] = true;
+            gsap.to(serwis1, { height: heights[0], duration: .3 })
+                .then(() => {
+                    gsap.to(serwis1, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            serwisH1.style.color = "#1B1C20";
+            popupsSerwis[0] = false;
+            gsap.to(serwis1, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(serwis1, { height: 0, duration: .3 });
+                });
+        }
+    }
+    else if(n === 2) {
+        if(!popupsSerwis[1]) {
+            serwisH2.style.color = "#B4C618";
+            popupsSerwis[1] = true;
+            gsap.to(serwis2, { height: heights[1], duration: .3 })
+                .then(() => {
+                    gsap.to(serwis2, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            serwisH2.style.color = "#1B1C20";
+            popupsSerwis[1] = false;
+            gsap.to(serwis2, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(serwis2, { height: 0, duration: .3 });
+                });
+        }
+    }
+    else if(n === 3) {
+        if(!popupsSerwis[2]) {
+            serwisH3.style.color = "#B4C618";
+            popupsSerwis[2] = true;
+            gsap.to(serwis3, { height: heights[2], duration: .3 })
+                .then(() => {
+                    gsap.to(serwis3, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            serwisH3.style.color = "#1B1C20";
+            popupsSerwis[2] = false;
+            gsap.to(serwis3, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(serwis3, { height: 0, duration: .3 });
+                });
+        }
+    }
+    else {
+        if(!popupsSerwis[3]) {
+            serwisH4.style.color = "#B4C618";
+            popupsSerwis[3] = true;
+            gsap.to(serwis4, { height: heights[3], duration: .3 })
+                .then(() => {
+                    gsap.to(serwis4, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            serwisH4.style.color = "#1B1C20";
+            popupsSerwis[3] = false;
+            gsap.to(serwis4, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(serwis4, { height: 0, duration: .3 });
+                });
+        }
+    }
+}
+
+const czesci = (n) => {
+    if(window.innerWidth > 1500) {
+        heights = over1500Heights;
+    }
+    else if(window.innerWidth > 1000) {
+        heights = over1000Heights;
+    }
+    else {
+        heights = over700Heights;
+    }
+
+    if(n === 1) {
+        if(!popupsCzesci[0]) {
+            czesciH1.style.color = "#B4C618";
+            popupsCzesci[0] = true;
+            gsap.to(czesci1, { height: heights[4], duration: .3 })
+                .then(() => {
+                    gsap.to(czesci1, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            czesciH1.style.color = "#1B1C20";
+            popupsCzesci[0] = false;
+            gsap.to(czesci1, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(czesci1, { height: 0, duration: .3 });
+                });
+        }
+    }
+    else if(n === 2) {
+        if(!popupsCzesci[1]) {
+            czesciH2.style.color = "#B4C618";
+            popupsCzesci[1] = true;
+            gsap.to(czesci2, { height: heights[5], duration: .3 })
+                .then(() => {
+                    gsap.to(czesci2, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            czesciH2.style.color = "#1B1C20";
+            popupsCzesci[1] = false;
+            gsap.to(czesci2, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(czesci2, { height: 0, duration: .3 });
+                });
+        }
+    }
+    else if(n === 3) {
+        if(!popupsCzesci[2]) {
+            czesciH3.style.color = "#B4C618";
+            popupsCzesci[2] = true;
+            gsap.to(czesci3, { height: heights[6], duration: .3 })
+                .then(() => {
+                    gsap.to(czesci3, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            czesciH3.style.color = "#1B1C20";
+            popupsCzesci[2] = false;
+            gsap.to(czesci3, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(czesci3, { height: 0, duration: .3 });
+                });
+        }
+    }
+    else if(n === 4) {
+        if(!popupsCzesci[3]) {
+            czesciH4.style.color = "#B4C618";
+            popupsCzesci[3] = true;
+            gsap.to(czesci4, { height: heights[7], duration: .3 })
+                .then(() => {
+                    gsap.to(czesci4, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            czesciH4.style.color = "#1B1C20";
+            popupsCzesci[3] = false;
+            gsap.to(czesci4, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(czesci4, { height: 0, duration: .3 });
+                });
+        }
+    }
+    else {
+        if(!popupsCzesci[4]) {
+            czesciH5.style.color = "#B4C618";
+            popupsCzesci[4] = true;
+            gsap.to(czesci5, { height: heights[8], duration: .3 })
+                .then(() => {
+                    gsap.to(czesci5, { opacity: 1, duration: .3 });
+                });
+        }
+        else {
+            czesciH5.style.color = "#1B1C20";
+            popupsCzesci[4] = false;
+            gsap.to(czesci5, { opacity: 0, duration: .3 })
+                .then(() => {
+                    gsap.to(czesci5, { height: 0, duration: .3 });
+                });
+        }
+    }
+}
+

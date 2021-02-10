@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalchem - maszyny nowe</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile.css" />
+</head>
+<body>
+<div class="container">
+    <!-- HEADER -->
+    <header class="siteHeader">
+        <div class="siteHeaderTop">
+            <img class="siteHeaderTopClass" src="./img/claas-logo.png" alt="class" />
+
+            <img class="siteHeaderTopKalchem" src="./img/kalchem-logo.png" alt="kalchem" />
+
+            <input class="siteHeaderSearchInput" placeholder="Szukaj..." />
+        </div>
+
+        <menu class="siteHeaderMenu">
+            <ul class="siteHeaderMenuList">
+                <li class="menuItem">
+                    <img class="siteHeaderMenuHome" src="./img/home.svg" alt="home" />
+                    Strona główna
+                </li>
+                <li class="menuItem">O nas</li>
+                <li class="menuItem">Maszyny nowe</li>
+                <li class="menuItem">Maszyny używane</li>
+                <li class="menuItem">Usługi</li>
+                <li class="menuItem">Serwis i części</li>
+                <li class="menuItem">Oferty specjalne</li>
+                <li class="menuItem">Aktualności</li>
+            </ul>
+            <span class="siteMenuLeft"></span>
+            <span class="siteMenuRight"></span>
+        </menu>
+    </header>
+    <!-- SERWIS I CZESCI -->
+    <main class="serwisICzesci">
+        <h1 class="sectionHeader">
+            Serwis i części
+        </h1>
+        <div class="serwisInner">
+            <div class="serwis">
+                <img class="serwisImg" src="./img/serwis-claas.png" alt="serwis" />
+                <h2 class="serwisHeader">Serwis</h2>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="serwisH1" onclick="serwis(1)">
+                        <span class="number">01</span>
+                        Pełna dokumentacja - jasna sytuacja
+                    </h3>
+                    <p class="serwisPopup" id="serwis1">
+                        Dokumentacja techniczna zapewnia, że wszystkie materiały dotyczące palety produktów są aktualne, kompletne i dostępne w każdym języku.
+                    </p>
+                </div>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="serwisH2" onclick="serwis(2)">
+                        <span class="number">02</span>
+                        Wyposażenie High Tech – wsparcie skrojone na miarę
+                    </h3>
+                    <p class="serwisPopup" id="serwis2">
+                        Bardzo nowoczesne warsztaty wyposażone w najnowszą technikę diagnostyczną umożliwiają dokładne diagnozowanie błędów oraz szybką kalkulację kosztów naprawy.
+                        W takim przypadku nasz partner serwisowy CLAAS ma do do dyspozycji narzędzia specjalne pozwalające wykonać naprawę szybko i niedrogo.
+                    </p>
+                </div>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="serwisH3" onclick="serwis(3)">
+                        <span class="number">03</span>
+                        Szybkość - w każdym czasie na miejscu.
+                    </h3>
+                    <p class="serwisPopup" id="serwis3">
+                        Gęsta sieć serwisowa i osobisty partner do rozmów gwarantują stały dostęp do nas – czy to do partnera handlowego, doradcy technicznego lub serwisu. Gdy nas potrzebujesz jesteśmy na miejscu. Zawsze. Szybko. Niezawodnie.
+                        W razie potrzeby partnerzy CLAAS zawsze mają do dyspozycji aktualne informacje online, pozwalające na szybkie reakcje i optymalne rozwiązania.
+                    </p>
+                </div>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="serwisH4" onclick="serwis(4)">
+                        <span class="number">04</span>
+                        Zdalna diagnoza CLAAS
+                    </h3>
+                    <p class="serwisPopup" id="serwis4">
+                        CLAAS TELEMATICS w maszynach żniwnych oferuje nie tylko korzyści ekonomiczne w czasie pracy, ale również szybką pomoc techniczną w oparciu o informacje uzyskiwane z bezprzewodowego połączenia z mechanikiem serwisu CLAAS. Technologia telefonii komórkowej oraz internetu pozwala przesyłać dane konkretnego pojazdu bezpośrednio do przyrządów diagnostycznych albo komputera mechanika. Może on wtedy z każdego miejsca postawić prawidłową diagnozę i dojechać z niezbędnymi częściami zamiennymi. Oszczędzony czas można wykorzystać na pracę maszyną.
+                    </p>
+                </div>
+            </div>
+            <span class="divider"></span>
+            <div class="czesci">
+                <img class="serwisImg" src="./img/czesci.png" alt="czesci" />
+                <h2 class="serwisHeader">Części</h2>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="czesciH1" onclick="czesci(1)">
+                        <span class="number">01</span>
+                        ORYGINALNE części CLAAS
+                    </h3>
+                    <p class="serwisPopup" id="czesci1">
+                        Części dają więcej niż tylko idealnie dopasowane wymiary. Stosowane materiały i ich odpowiednia obróbka są ważną podstawą niezawodnego i długoletniego użytkowania maszyn.
+
+                        Części wykonano z pełnowartościowych materiałów dokładnie według specyfikacji CLAAS i zgodnie ze sprawdzoną wiedzą CLAAS. Każda pojedyncza część jest optymalnie dostosowana do systemów funkcjonujących w maszynie.
+                    </p>
+                </div>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="czesciH2" onclick="czesci(2)">
+                        <span class="number">02</span>
+                        PREMIUM LINE - części wyjątkowo odporne na ścieranie
+                    </h3>
+                    <p class="serwisPopup" id="czesci2">
+                        Części PREMIUM LINE stanowią prawidłowy wybór dla ekstremalnych warunków pracy i szczególnego obciążenia maszyny. Wyróżnia je wyjątkowo wysoka odporność na ścieranie i korozję. Obszerną ofertę części  PREMIUM LINE proponujemy dla przepływu materiału w sieczkarniach polowych CLAAS JAGUAR.
+                    </p>
+                </div>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="czesciH3" onclick="czesci(3)">
+                        <span class="number">03</span>
+                        Środki smarne CLAAS ORIGINAL
+                    </h3>
+                    <p class="serwisPopup" id="czesci3">
+                        Chroniące i wydajne: środki smarne CLAAS ORIGINA są precyzyjne dostosowane do rosnących wymagań wielu części maszyn.
+
+                        Środki smarne CLAAS są sprawdzone oraz dozwolone do stosowania przez dział rozwoju technicznego i odpowiadają wszystkim wymaganiom technicznym. Spełniają stale rosnące potrzeby przekładni, osi, hydrauliki i mokrych układów hamulcowych.
+                    </p>
+                </div>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="czesciH4" onclick="czesci(4)">
+                        <span class="number">04</span>
+                        Opakowania do kiszonki i balotów CLAAS ORIGINAL
+                    </h3>
+                    <p class="serwisPopup" id="czesci4">
+                        Siatka, sznurek i folia do owijania bel spełniają wysokie wymogi jakościowe CLAAS. Zostały wypróbowane w polu i są maksymalnie ekonomiczne. Poddano je szeroko zakrojonym testom, które potwierdziły, że produkty te odpowiadają za płynny przebieg procesów roboczych. Wszystkie testowane wyroby zostały bez wyjątku zatwierdzone przez specjalistów produktowych CLAAS. Nasze wydajne siatki do owijania czy wysokiej jakości sznurki są zaawansowanymi materiałami eksploatacyjnymi, których ekonomiczność i pewność działania są stale optymalizowana.
+                    </p>
+                </div>
+                <div class="serwisItemWrapper">
+                    <h3 class="serwisItem" id="czesciH5" onclick="czesci(5)">
+                        <span class="number">05</span>
+                        Obciążniki przednie CLAAS
+                    </h3>
+                    <p class="serwisPopup" id="czesci5">
+                        Także w kwestiach odpowiedniego obciążenia CLAAS oferuje szeroki asortyment produktów. Do każdego zastosowania i każdego typu maszyny istnieje odpowiedni obciążnik przedni CLAAS. Ciągniki są eksploatowane przez cały rok i służą do rozmaitych zadań roboczych. Zarówno na polu, jak i przy uprawie roli odpowiednie obciążenie umożliwia efektywną, ekonomiczną i łagodniejszą dla podłoża pracę.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- OSOBY KONTAKTOWE -->
+    <section class="osobyKontaktowe">
+        <h1 class="sectionHeader">
+            Twoje osoby kontaktowe
+        </h1>
+
+        <div class="osobyKontaktoweInner">
+            <div class="pracownik">
+                <h2 class="pracownikExtraHeader">
+                    Serwis
+                </h2>
+
+                <img class="pracownikImg" src="./img/profile.svg" alt="profilowe" />
+
+                <h3 class="pracownikName">
+                    Adam Wiśniewski
+                </h3>
+                <h4 class="pracownikFunction">
+                    Kierownik serwisu
+                </h4>
+
+                <div class="pracownikContact">
+                    <img class="pracownikContactIcon" src="./img/phone.svg" alt="telefon" />
+                    <h5 class="pracownikContactText">
+                        <a href="tel:0564911832">
+                            056 49 118 32
+                        </a>
+                    </h5>
+                </div>
+                <div class="pracownikContact">
+                    <img class="pracownikContactIcon" src="./img/mobile.svg" alt="komorka" />
+                    <h5 class="pracownikContactText">
+                        <a href="tel:+48123123123">
+                            123 123 123
+                        </a>
+                    </h5>
+                </div>
+                <div class="pracownikContact">
+                    <img class="pracownikContactIcon" src="./img/mail.svg" alt="mail" />
+                    <h5 class="pracownikContactText">
+                        <a href="mailto:kierownik-serwisu@kalchem.pl">
+                            kierownik-serwisu@kalchem.pl
+                        </a>
+                    </h5>
+                </div>
+            </div>
+
+            <span class="divider divider2"></span>
+
+            <div class="pracownik">
+                <h2 class="pracownikExtraHeader">
+                    Części
+                </h2>
+
+                <img class="pracownikImg" src="./img/profile.svg" alt="profilowe" />
+
+                <h3 class="pracownikName">
+                    Adam Wiśniewski
+                </h3>
+                <h4 class="pracownikFunction">
+                    Dyrektor operacyjny ds.koordynacji serwisu oraz magazynu części zamiennych
+                </h4>
+
+                <div class="pracownikContact">
+                    <img class="pracownikContactIcon" src="./img/phone.svg" alt="telefon" />
+                    <h5 class="pracownikContactText">056 49 118 32</h5>
+                </div>
+                <div class="pracownikContact">
+                    <img class="pracownikContactIcon" src="./img/mobile.svg" alt="komorka" />
+                    <h5 class="pracownikContactText">123 123 123</h5>
+                </div>
+                <div class="pracownikContact">
+                    <img class="pracownikContactIcon" src="./img/mail.svg" alt="mail" />
+                    <h5 class="pracownikContactText">kierownik-czesci@kalchem.pl</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+    <ul class="footerFirst">
+        <li><a href="#">Metryczka</a></li>
+        <li><a href="#">Ochrona danych</a></li>
+        <li><a href="#">Ogólne warunki handlowe</a></li>
+    </ul>
+    <div class="footerSecond">
+        <h3>Znajdź nas na Facebooku</h3>
+        <a href="https://facebook.com" rel="noreferrer" target="_blank">
+            <img class="facebook" src="./img/facebook.svg" alt="facebook" />
+        </a>
+    </div>
+
+    <div class="footerThird">
+        Wszystkie prawa zastrzeżone &copy; Kalchem Sp. Z.O.O
+    </div>
+    <div class="footerFourth">
+        Projekt i wykonanie <a href="https://skylo.pl" rel="noreferrer" target="_blank">skylo.pl</a>
+    </div>
+</footer>
+<script src="./siema.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
