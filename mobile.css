@@ -1,6 +1,20 @@
+@media(max-width: 1700px) {
+    .menu-item {
+        padding: 5px 12px !important;
+    }
+}
+
 @media(max-width: 1500px) {
     .container {
         padding: 0 5% 80px;
+    }
+
+    .landingPage {
+        min-height: 500px;
+    }
+
+    .slide, .landingPageImage {
+        height: 100%;
     }
 
     .menuItem {
@@ -60,9 +74,37 @@
     .osobyKontaktoweInner {
         width: 80%;
     }
+
+    .menu-item a {
+        font-size: 12px;
+    }
+
+    .menu-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+@media(max-width: 1300px) {
+    .ofertaSpecjalnaInner {
+        justify-content: space-between;
+    }
+
+    .ofertaSpecjalnaItem {
+        width: 40%;
+    }
 }
 
 @media(max-width: 1200px) {
+    #map {
+        width: 100%;
+    }
+
+    .menu-item a {
+        font-size: 12px;
+    }
+
     .maszynyOverlayText {
         font-size: 13px;
     }
@@ -87,6 +129,20 @@
 
     .firmaDescription {
         width: 80%;
+    }
+
+    .aktualnosciRight, .aktualnosciLeft::after {
+        display: none;
+    }
+
+    .aktualnosciLeft {
+        width: 100%;
+    }
+
+    .maszynyClaasInner {
+        width: 100%;
+        grid-template-columns: repeat(3, 32%);
+        grid-column-gap: 2%;
     }
 }
 
@@ -148,11 +204,99 @@
     .markiInnerItem {
         flex-basis: 100%;
     }
+
+    .menu-item {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .maszynyClaasInner {
+        grid-template-columns: repeat(2, 49%);
+    }
 }
 
 @media(max-width: 900px) {
     .container {
-        padding-bottom: 20px;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .landingPage {
+        min-height: auto;
+    }
+
+    .searchContainer {
+        padding: 0 5% 30px 5%;
+    }
+
+    .siteHeaderTop {
+        height: auto;
+        padding: 20px 10%;
+        align-items: flex-end;
+    }
+
+    #searchform {
+        display: none;
+    }
+
+    .mobileMenu .siteHeaderSearchInput {
+        display: block !important;
+    }
+
+    .siteHeaderTopClass, .siteHeaderTopKalchem {
+        width: 80%;
+        height: auto;
+        max-width: 200px;
+    }
+
+    .siteHeaderTop a {
+        display: flex;
+        align-items: center;
+    }
+
+    .siteHeaderTop a:first-of-type{
+        justify-content: flex-end;
+        order: 2;
+    }
+
+    .siteHeaderTop a:last-of-type {
+        justify-content: flex-start;
+        order: 1;
+    }
+
+    .desktopMenu {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburgerMenu {
+        background: transparent;
+        height: 20px;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburgerLine {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: #fff;
+    }
+
+    .mobileSearchInput {
+        display: block;
+        height: 30px;
+        width: 130px;
+        padding: 4px 10px;
+        border: 1px solid #AEAEAE;
     }
 
     .uslugiInner {
@@ -181,9 +325,204 @@
     .osobyKontaktoweInner {
         width: 100%;
     }
+
+    section, .oNas, .serwisICzesci, .aktualnosciPage, .uslugiMain, .singleArticle {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .mobileDark {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(27, 28, 32, .75);
+        display: block;
+        z-index: 2;
+    }
+
+    .slideHeaderPrimary, .slideHeaderSecondary, .dots {
+        left: 50%;
+        background: transparent;
+        z-index: 3;
+        padding: 4px;
+        transform: translateX(-50%);
+    }
+
+    .slideHeaderPrimary2 {
+        top: 95px;
+    }
+
+    .slideHeaderSecondary {
+        top: 170px;
+    }
+
+    .slideHeaderButton, .progressBar {
+        display: none;
+    }
+
+    .dots {
+        padding: 1px;
+        right: auto;
+        top: auto !important;
+        bottom: 50px;
+    }
+
+    .mobileMenuList {
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 0;
+        background: #B4C618;
+        z-index: 130;
+        opacity: 0;
+        display: block;
+    }
+
+    .hamburgerMenu {
+        position: relative;
+        z-index: 120;
+    }
+
+    .mobileMenuList > div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    .mobileMenuList ul {
+        opacity: 0;
+        display: none;
+    }
+
+    .mobileMenuList ul li {
+        justify-content: center;
+    }
+
+    .closeMenuBtn {
+        background: transparent;
+        position: absolute;
+        right: 5%;
+        top: 40px;
+        opacity: 0;
+    }
+
+    .zespolSection, .zespolInner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zespolSection .pracownikExtraHeader {
+        margin-right: 0;
+    }
+
+    .zespolSection .pracownik {
+        margin: 30px 0 0 0;
+    }
+
+    .arrowMobile {
+        display: block;
+        z-index: 90;
+    }
+
+    .arrowMobileLeft {
+        left: 20px;
+        transform: rotate(180deg);
+    }
+
+    .arrowMobileRight {
+        right: 20px;
+        transform: rotate(0);
+    }
+
+    .landingPage {
+        height: 330px !important;
+    }
+
+    .slide {
+        height: 100% !important;
+    }
+
+    .landingPageImage {
+        width: 100vw;
+        height: 330px !important;
+    }
+
+    .slideLinkWrapper {
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+    }
+
+    .slideHeaderPrimary {
+        margin: 0;
+        top: 55% !important;
+        font-size: 23px;
+    }
+
+    .slideHeaderSecondary {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+    }
+
+    .slideLinkWrapper:hover * {
+        background: inherit !important;
+    }
+
+    .galeriaPage {
+        width: 90%;
+    }
+
+    .galeriaItem {
+        margin-bottom: 30px;
+    }
+
+    .galeriaTitle {
+        transform: translate(-50%, -50%) scale(1);
+        font-size: 16px;
+    }
+
+    .galeriaOverlay {
+        height: 100%;
+    }
+
+    .galeriaPageInner {
+        margin: 15px 0;
+    }
+
+    .mobileMenuList a {
+        font-size: 18px !important;
+    }
+
+    .ofertaSpecjalnaItem {
+        width: 48%;
+    }
+	
+	.aktualnosciPage .maszynyInner {
+		margin-top: 20px;
+	}
+	
+	.maszynyNoweListImgWrapper {
+		justify-content: center;
+	}
 }
 
 @media(max-width: 800px) {
+	.aktualnosciPage .maszynyInnerItemHeader {
+	margin-top: 0 !important;
+}
+	
+	.pracownik {
+		width: 100%;
+	}
+	
+	.aktualnosciPage .maszynyOverlay {
+		height: 100% !important;
+	}
+	
     .maszynyInner {
         display: flex;
         flex-direction: column;
@@ -216,6 +555,7 @@
         display: flex;
         align-items: center;
         margin-top: 0;
+        text-align: center;
     }
 
     .classHint {
@@ -264,33 +604,54 @@
     .footerFirst li {
         margin: 0 20px;
     }
+
+    .ofertaSpecjalnaInner {
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .ofertaSpecjalnaItem .maszynyOverlay {
+        height: 327px;
+    }
+
+    .ofertaSpecjalnaItem .maszynyOverlayText {
+        display: block;
+        transform: scale(1);
+    }
+
+    .ofertaSpecjalnaItem .maszynyOverlayImg {
+        transform: scale(1);
+    }
+
+    .ofertaSpecjalnaItem {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 @media(max-width: 700px) {
-    .producenciSlider {
-        justify-content: center;
+    .producenciArrowImg {
+        width: 23px;
+        height: 23px;
     }
 
-    .producenciArrow {
-        display: none;
-    }
-
-    .producenciSliderInner {
-        width: 90vw;
-        height: calc(90vw / 1.9);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .producenciSliderInner > div {
+        margin-top: 10%;
     }
 
     .producenciSliderInnerItem {
-        max-width: 80%;
         height: auto;
     }
 
     .producenciSliderInnerItemImg {
         width: 100%;
+        transform: scale(.85);
         height: auto;
+    }
+
+    .producenciSliderInner {
+        width: 60vw;
     }
 
     .sectionHeader {
@@ -312,6 +673,108 @@
 
     .czesci {
         margin-top: 110px;
+    }
+
+    .aktualnosciLeft {
+        padding-bottom: 20px;
+    }
+
+    .aktualnosciItem {
+        width: 100%;
+    }
+
+    .aktualnosciItem:last-child {
+        margin-bottom: 0;
+    }
+
+    .dots {
+        bottom: 15px;
+    }
+
+    .dot {
+        height: 5px;
+        width: 40px;
+    }
+
+    .slide {
+        overflow-x: hidden;
+    }
+
+    .slideHeaderPrimary {
+        text-align: center;
+    }
+
+    .slideHeaderPrimary1 {
+        top: 30px;
+    }
+
+    .slideHeaderPrimary2 {
+        top: 60px;
+    }
+
+    .slideHeaderSecondary {
+        top: 115px;
+        text-align: center;
+    }
+
+    .uslugiItemImgWrapper {
+        width: 70px;
+        padding-right: 0;
+    }
+
+    .uslugiItemHeader, .uslugiItemDescription {
+        padding-left: 20px;
+    }
+
+    .uslugiItemHeader {
+        font-size: 15px;
+    }
+
+    .uslugiItemDescription {
+        font-size: 13px;
+    }
+
+    .uslugiItemImg {
+        width: 55px;
+        height: auto;
+    }
+
+    .uslugiItem {
+        justify-content: space-between;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .uslugiItem>div:last-child {
+        width: 65%;
+    }
+
+    .uslugiItem:last-of-type {
+        margin-bottom: 45px;
+    }
+
+    .aktualnosciItemExcerpt, .footer * {
+        font-size: 13px;
+    }
+
+    .maszynyNoweSlogansPartDescription {
+        font-size: 14px;
+    }
+
+    .maszynyNoweSlogansPart {
+        margin-bottom: 90px;
+    }
+
+    .maszynyNoweMapaContainer {
+        margin-top: 0;
+    }
+
+    .maszynyNoweSlogansPart:last-child::before {
+        top: -40px;
+    }
+
+    .maszynyNoweProgressBar {
+        width: 100% !important;
     }
 }
 
@@ -386,6 +849,19 @@
         width: 100%;
         font-size: 14px;
     }
+
+    .maszynyClaasInner {
+        grid-template-columns: 100%;
+    }
+
+    .ofertaPracyItemHeader {
+        font-size: 16px;
+        grid-column: 1 / span 2;
+    }
+
+    .ofertyPracyHeader {
+        font-size: 20px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -409,11 +885,51 @@
     .arrowRight {
         right: 30px;
     }
+
+    .contentBtn {
+        width: 100%;
+        font-size: 12px;
+        padding: 10px;
+    }
 }
 
 @media(max-width: 400px) {
     .serwis, .czesci {
         width: 100%;
+    }
+
+    .markiLeft {
+        left: 25px;
+    }
+
+    .markiRight {
+        right: 25px;
+    }
+
+    .markiTrack > div > div {
+        margin-top: 2.7%;
+    }
+
+    .markiInnerItemImg {
+        transform: scale(.55);
+    }
+
+    /*.markiTrack > div > div {*/
+    /*    transform: translateX(-10px);*/
+    /*}*/
+
+    #contentWielkiGleboczek, #contentZurominek, #contentWiktoryn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentImg {
+        margin-bottom: 20px;
+        padding-right: 0;
+    }
+
+    .contentHeader {
+        margin-bottom: 10px;
     }
 }
 

@@ -1,12 +1,3 @@
-/*
-Theme Name: Kalchem
-Author: Skylo.pl
-Author URI: https://skylo.pl/
-Requires at least: 5.0
-Tested up to: 5.4
-Requires PHP: 7.0
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /* Global */
@@ -30,12 +21,6 @@ button, input {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-@media(min-width: 900px) {
-    body {
-        border-top: 5px solid #B4C618;
-    }
 }
 
 .container {
@@ -79,26 +64,11 @@ a, .serwisItem {
     height: 106px;
 }
 
-.siteHeaderSearchWrapper {
-    position: relative;
-}
-
-.lupa {
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-}
-
 .siteHeaderSearchInput {
     width: 260px;
     height: 30px;
     border: 1px solid #AEAEAE;
     padding: 5px;
-    position: relative;
-    display: block;
 }
 
 .siteHeaderMenu {
@@ -112,8 +82,7 @@ a, .serwisItem {
     transition: .5s width;
     transform-origin: 50% 50%;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 1400px;
     position: relative;
 }
@@ -130,16 +99,18 @@ a, .serwisItem {
     z-index: 10 !important;
     width: calc((100vw - 1400px) / 2);
     background: #B4C618;
-    opacity: 0;
+    transform: scaleX(0);
 }
 
 .siteMenuLeft {
     left: 0;
+    transform: translateX(-100%) scaleX(0);
     transform-origin: 100%;
 }
 
 .siteMenuRight {
     right: 0;
+    transform: translateX(100%) scaleX(0);
     transform-origin: 0;
 }
 
@@ -172,10 +143,9 @@ a, .serwisItem {
     text-align: center;
     display: flex;
     align-items: center;
-    font-size: 14px;
 }
 
-.menu-item:last-of-type {
+.menuItem:last-of-type {
     border-right: none;
 }
 
@@ -200,7 +170,6 @@ a, .serwisItem {
 }
 
 .slide {
-    display: block;
     width: 100%;
     opacity: 0;
     position: absolute;
@@ -210,7 +179,6 @@ a, .serwisItem {
 
 .slideActive {
     opacity: 1;
-    z-index: 3;
 }
 
 .landingPageImage {
@@ -220,37 +188,40 @@ a, .serwisItem {
     object-position: center bottom;
 }
 
-.slideLinkWrapper {
-    position: absolute;
-    z-index: 10;
-    left: 50px;
-    top: 50px;
-}
-
 .slideHeaderPrimary, .slideHeaderSecondary {
+    position: absolute;
+    left: 50px;
     background: #1B1C20;
     color: #fff;
-    padding: 15px 18px 15px 15px;
+    padding: 18px;
+    height: 54px;
     font-size: 26px;
     display: flex;
     align-items: center;
-    margin: 15px 0;
-    width: fit-content;
-    width: -moz-max-content;
-    transition: .2s ease-in-out all;
+}
+
+.slideHeaderPrimary1 {
+    top: 50px;
+}
+
+.slideHeaderPrimary2 {
+    top: 115px;
 }
 
 .slideHeaderSecondary {
     height: 36px;
     font-weight: 400;
+    top: 190px;
     font-size: 20px;
-    margin: 20px 0;
 }
 
 .slideHeaderButton {
     background: #B4C618;
     color: #fff;
     padding: 10px 20px;
+    position: absolute;
+    left: 50px;
+    top: 250px;
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
@@ -258,20 +229,42 @@ a, .serwisItem {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    transition: .2s ease-in-out all;
+    transition: .4s ease-in-out all;
+    z-index: 5;
+    width: 110px;
+    height: 30px;
 }
 
-.slideLinkWrapper:hover .slideHeaderButton {
-    background: #C5D729;
-}
-
-.slideLinkWrapper:hover .slideHeaderPrimary, .slideLinkWrapper:hover .slideHeaderSecondary {
-    background: #0A0B10;
+.slideHeaderButton a::after {
+    content: url("./img/caret_right.svg");
+    position: absolute;
+    right: 18px;
+    transform: translateX(100%);
+    top: 0;
+    height: 100%;
+    background: #B4C618;
+    width: 30px;
+    transition: .4s ease-in-out all;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 18px;
+    align-items: center;
 }
 
 .slideHeaderButton a:hover::after {
     width: 25px;
     padding-left: 26px;
+}
+
+.slideHeaderButton a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
 }
 
 .buttonRight {
@@ -286,7 +279,6 @@ a, .serwisItem {
     right: 50px;
     display: flex;
     height: 10px;
-    z-index: 4;
 }
 
 .dot {
@@ -307,7 +299,6 @@ a, .serwisItem {
     width: 150px;
     height: 10px;
     background: #1B1C20;
-    z-index: 4;
 }
 
 .progressBarProgress {
@@ -315,15 +306,10 @@ a, .serwisItem {
     width: 30%;
     height: 100%;
     background: #B4C618;
-    transition: all;
 }
 
 section {
     margin-top: 120px;
-    width: 100%;
-}
-
-.galeriaPage {
     width: 100%;
 }
 
@@ -336,15 +322,15 @@ section {
 
 /* TMP */
 
-/*@media(min-width: 900px) {*/
-/*    #slide1 .landingPageImage {*/
-/*        object-position: center -200px;*/
-/*    }*/
+@media(min-width: 900px) {
+    #slide1 .landingPageImage {
+        object-position: center -200px;
+    }
 
-/*    #slide4 .landingPageImage {*/
-/*        object-position: center -300px;*/
-/*    }*/
-/*}*/
+    #slide4 .landingPageImage {
+        object-position: center -300px;
+    }
+}
 
 /* Aktualnosci */
 
@@ -397,14 +383,12 @@ section {
     font-size: 12px;
     color: #AEAEAE;
     font-weight: 400;
-    margin-bottom: 0;
-	margin-top: 0 !important;
+    margin-bottom: 15px;
 }
 
 .aktualnosciItemExcerpt {
     font-size: 15px;
     margin-bottom: 20px;
-	margin-top: 20px !important;
 }
 
 .aktualnosciItemButton {
@@ -604,7 +588,7 @@ section {
 .maszynyInner {
     display: grid;
     grid-template-columns: repeat(3, 30%);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, 321px);
     grid-row-gap: 120px;
     grid-column-gap: 5%;
     margin-top: 70px;
@@ -616,33 +600,15 @@ section {
     align-items: center;
     position: relative;
     cursor: pointer;
-    height: -moz-max-content;
 }
 
-.maszynyInnerItem:hover .maszynyOverlay,
-.ofertaSpecjalnaItem:hover .maszynyOverlay
-
-{
-    height: 327px;
+.maszynyInnerItem:hover .maszynyOverlay {
+    height: 321px;
     padding: 30px;
 }
 
-.aktualnosciPage .maszynyInnerItem:hover .maszynyOverlay {
-    height: 324px;
-}
-
-.maszynyInnerItem:hover .maszynyOverlayText,
-.ofertaSpecjalnaItem:hover .maszynyOverlayText
-
-{
+.maszynyInnerItem:hover .maszynyOverlayText {
     transform: scale(1);
-    transition-delay: .4s;
-}
-
-.maszynyClaasItem:hover .maszynyOverlayImg,
-.ofertaSpecjalnaItem:hover .maszynyOverlayImg
-{
-    transform: scale(.8);
     transition-delay: .4s;
 }
 
@@ -650,9 +616,10 @@ section {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: .9;
     width: 100%;
     height: 10px;
-    background: rgba(180, 198, 24, .9);
+    background: #B4C618;
     transition: .4s;
     display: flex;
     justify-content: center;
@@ -660,20 +627,12 @@ section {
     cursor: pointer;
 }
 
-.maszynyOverlayText, .maszynyClaasItem .maszynyOverlayImg {
+.maszynyOverlayText {
     transform: scale(0);
     color: #fff;
     font-size: 17px;
     transition: .4s all;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.maszynyOverlayText {
-    width: 50px;
-    height: 50px;
 }
 
 .maszynyInnerItemImg {
@@ -688,7 +647,6 @@ section {
     padding: 8px 20px;
     margin-top: 20px;
     text-align: center;
-    color: #fff;
 }
 
 /* Uslugi */
@@ -725,11 +683,6 @@ section {
 .uslugiItemDescription {
     font-size: 15px;
     font-weight: 400;
-}
-
-.desktopSliderContainer {
-    position: relative;
-    display: block;
 }
 
 /* Footer */
@@ -814,8 +767,6 @@ section {
 .maszynyNoweListImgWrapper {
     opacity: .7;
     transition: .4s all;
-    display: flex;
-    align-items: center;
 }
 
 .maszynyNoweList img {
@@ -826,7 +777,7 @@ section {
     -o-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
-    transition: .2s all;
+    transition: .4s all;
     width: 100px;
     height: auto;
 }
@@ -1107,12 +1058,7 @@ section {
 }
 
 .pracownik {
-    width: 25%;
-	margin-bottom: 30px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
+    width: 250px;
 }
 
 .pracownikExtraHeader {
@@ -1160,7 +1106,6 @@ section {
 
 .pracownikContact {
     margin: 15px auto;
-	width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1241,7 +1186,7 @@ section {
 }
 
 .zespolInner {
-    width: 100%;
+    width: 1008px;
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
@@ -1289,20 +1234,12 @@ main, section {
     width: 400px;
 }
 
-.aktualnosci .aktualnosciInner, .markiInner,
+.maszynyInnerFront, .aktualnosci .aktualnosciInner, .markiInner,
 .maszyny .siteHeaderTopClass,
 .classHint,
-.uslugiItem
+.uslugiInner
 {
     opacity: 0;
-}
-
-.aktualnosciPage .maszynyInnerItem {
-    transform: none !important;
-}
-
-.maszynyInnerItem {
-    transform: scale(0);
 }
 
 .trigger1 {
@@ -1320,22 +1257,14 @@ main, section {
     width: 100%;
 }
 
-.site-main-404 {
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Single */
 
 .singleArticle {
     width: 100%;
-    margin-top: 30px;
 }
 
-.singleContent img {
-    max-width: 100%;
+.singleContent {
+    margin-top: 30px;
 }
 
 .singleContent p {
@@ -1360,9 +1289,8 @@ main, section {
 
 .contentImg {
     width: 100px;
-    height: 43px;
+    height: auto;
     padding-right: 15px;
-    margin-top: 15px;
 }
 
 .contentHeader {
@@ -1398,7 +1326,7 @@ main, section {
 }
 
 .wiadomosciPageInner {
-    margin: 50px 0;
+    margin-top: 50px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1412,6 +1340,10 @@ main, section {
     padding: 0 !important;
     margin: 0 0 20px 0 !important;
     padding: 5px 20px !important;
+}
+
+#menu-menu-2 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-19 {
+    border-right: none !important;
 }
 
 /* Calendar */
@@ -1478,267 +1410,4 @@ main, section {
 
 button.mc-toggle:hover, button.mc-toggle:focus {
     outline: none !important;
-}
-
-.mobileMenuHomeBtn {
-    width: 25px;
-    height: 25px;
-}
-
-.mobileMenuHomeImg {
-    width: 100%;
-    height: auto;
-}
-
-.mobileMenuList > a {
-    width: 200px;
-    height: 85px;
-    display: flex;
-    justify-content: center;
-    margin: 20% auto 0;
-}
-
-#mobileMenuTopImg {
-    opacity: 0;
-    display: block !important;
-    width: auto !important;
-    height: auto !important;
-    max-width: 140px !important;
-}
-
-.maszynyInnerItem, .uslugiItem {
-    position: relative;
-}
-
-.maszynyTrigger {
-    position: absolute;
-    top: -20px;
-    width: 1px;
-    height: 100px;
-}
-
-.galeriaPageInner {
-    display: grid;
-    grid-template-columns: repeat(3, 32%);
-    grid-column-gap: 2%;
-    grid-row-gap: 50px;
-}
-
-.galeriaItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.galeriaItem:hover .galeriaOverlay {
-    height: 100%;
-}
-
-.galeriaItem:hover .galeriaTitle {
-    transform: translate(-50%, -50%) scale(1);
-    transition-delay: .4s;
-}
-
-.galeriaThumbnail {
-    width: 100%;
-    height: 100%;
-}
-
-.galeriaTitle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    z-index: 5;
-    transition: .3s all;
-    text-align: center;
-    color: #fff;
-}
-
-.singleArticle .ngg-navigation {
-    display: none !important;
-}
-
-.galeriaOverlay {
-    display: block;
-    height: 0;
-    width: 100%;
-    transition: .4s all;
-    opacity: .9;
-    background: #B4C618;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-}
-
-/* Kontakt */
-
-#position {
-    margin: 0 auto;
-    display: block;
-    padding: 10px 2px;
-    background: #B4C618;
-    color: #fff;
-}
-
-#position option {
-    color: #fff;
-    padding: 10px 2px;
-}
-
-.kontaktPageInner {
-    flex-direction: column;
-    align-items: center;
-}
-
-@media(min-width: 1600px) {
-    .slideHeaderPrimary {
-        font-size: 38px !important;
-    }
-}
-
-.aktualnosciPage p {
-    margin-top: 30px;
-    text-align: justify;
-}
-
-.aktualnosciPage h1:last-of-type {
-    margin: 30px 0;
-}
-
-.aktualnosciPage h3 {
-    margin-top: 55px;
-}
-
-/* Maszyny Claas */
-.maszynyClaasInner {
-    margin: 30px auto;
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-column-gap: 5%;
-    grid-row-gap: 50px;
-    justify-items: center;
-}
-
-.maszynyClaasItemImg {
-    height: 145px;
-}
-
-.maszynyClaasItem {
-    border-top: 5px solid #B4C618;
-    margin: 0 20px 0 20px;
-    display: block;
-    position: relative;
-    width: fit-content;
-    width: -moz-max-content;
-    border-bottom: 1px solid #AAAAAA;
-}
-
-.maszynyClaasItemHeader {
-    font-size: 16px;
-    text-align: center;
-    padding: 15px 0;
-    max-width: 230px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.maszynyClaasItem .maszynyOverlay {
-    height: 2px !important;
-}
-
-.maszynyClaasItem:hover .maszynyOverlay {
-    height: 145px !important;
-}
-
-@media(max-width: 1000px) {
-    .maszynyClaasInner {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-/* Praca */
-
-.ofertaPracyItem {
-    margin: 20px 0;
-    width: 100%;
-    min-height: 40px;
-    background: #B4C618;
-    color: #fff;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    align-content: center;
-    padding: 16px 20px;
-}
-
-.ofertaPracyItemHeader {
-    color: #fff;
-    font-size: 18px;
-    grid-row: 1;
-    grid-column: 1;
-    margin-top: 0 !important;
-}
-
-.ofertaPracyItemBtn {
-    background: transparent;
-    grid-column: 2;
-    grid-row: 1;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #fff;
-    justify-self: flex-end;
-    cursor: pointer;
-}
-
-.ofertaPracyItemDescription {
-    color: #fff;
-    font-size: 15px;
-    margin-top: 0 !important;
-    align-self: flex-start;
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    max-height: 0;
-    opacity: 0;
-    transition: .4s all;
-}
-
-.ofertyPracyIntro {
-    margin-bottom: 80px;
-    margin-top: 10px !important;
-}
-
-/* Oferta specjalna */
-.ofertaSpecjalnaInner {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.ofertaSpecjalnaItem {
-    width: 30%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.ofertaSpecjalnaImg {
-    width: auto;
-    height: 327px;
-}
-
-.ofertaSpecjalnaHeader {
-    background: #B4C618;
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 100%;
-    margin: 20px auto;
-    color: #fff;
-    text-align: center;
 }
