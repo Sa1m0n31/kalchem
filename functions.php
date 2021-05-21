@@ -140,10 +140,10 @@ add_action( 'widgets_init', 'kalchem_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kalchem_scripts() {
-	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css?n=8', array(), _S_VERSION );
-	wp_enqueue_style('mobile', get_stylesheet_directory_uri() . '/mobile.css?n=8', array(), 1.0);
+	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css?n=10', array(), _S_VERSION );
+	wp_enqueue_style('mobile', get_stylesheet_directory_uri() . '/mobile.css?n=10', array(), 1.0);
 
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js?n=1', array('siema', 'gsap', 'google-maps', 'jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js?n=2', array('siema', 'gsap', 'google-maps', 'jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'siema', get_template_directory_uri() . '/js/siema.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js', array(), _S_VERSION, true );
     wp_enqueue_script("google-maps", "https://maps.googleapis.com/maps/api/js?key=AIzaSyApCLw41Ys5mGI9Na62DRNnJc5IZS2zAeo&callback=initMap", array(), "1.0", true);

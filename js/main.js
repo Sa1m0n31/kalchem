@@ -999,34 +999,34 @@ const filterEmployees = (e) => {
             elements = document.querySelectorAll('.pracownik');
             break;
         case 'Właściciel':
-            elements = document.querySelectorAll("#właściciel");
+            elements = document.querySelectorAll(".c_właściciel");
             break;
         case 'Dyrektor handlowy':
-            elements = document.querySelectorAll('#dyrektor_handlowy');
+            elements = document.querySelectorAll('.c_dyrektor_handlowy');
             break;
         case 'Sprzedaż maszyn':
-            elements = document.querySelectorAll("#sprzedaż_maszyn");
+            elements = document.querySelectorAll(".c_sprzedaż_maszyn");
             break;
         case 'Biuro':
-            elements = document.querySelectorAll('#biuro');
+            elements = document.querySelectorAll('.c_biuro');
             break;
         case 'Części zamienne':
-            elements = document.querySelectorAll('#części_zamienne');
+            elements = document.querySelectorAll('.c_części_zamienne');
             break;
         case 'Serwis':
-            elements = document.querySelectorAll("#serwis");
+            elements = document.querySelectorAll(".c_serwis");
             break;
         case 'Logistyka':
-            elements = document.querySelectorAll('#logistyka');
+            elements = document.querySelectorAll('.c_logistyka');
             break;
         case 'Księgowość':
-            elements = document.querySelectorAll('#księgowość');
+            elements = document.querySelectorAll('.c_księgowość');
             break;
         case 'Oddział Wiktoryn':
-            elements = document.querySelectorAll('#oddział_wiktoryn');
+            elements = document.querySelectorAll('.c_oddział_wiktoryn');
             break;
         default:
-            elements = document.querySelectorAll('#oddział_Żurominek');
+            elements = document.querySelectorAll('.c_oddział_Żurominek');
             break;
     }
 

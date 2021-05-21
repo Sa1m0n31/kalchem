@@ -40,10 +40,16 @@ get_header();
         if($query->have_posts()) {
             while($query->have_posts()) {
                 $query->the_post();
+                $classes = "";
+                for($i=0; $i<sizeof(get_field('kategorie')); $i++) {
+                    $classes .= 'c_';
+                    $classes .= strtolower(str_replace(' ', '_', get_field('kategorie')[$i]));
+                    $classes .= ' ';
+                }
                 $id = strtolower(str_replace(' ', '_', get_field('kategoria')));
                 ?>
 
-                <div class="pracownik" id="<?php echo $id; ?>">
+                <div class="pracownik <?php echo $classes; ?>" id="<?php echo $id; ?>">
                     <img class="pracownikImg" src="<?php echo get_field('zdjecie'); ?>" alt="profilowe" />
 
                     <h3 class="pracownikName">
